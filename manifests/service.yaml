@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: badges-qrcode-generator
+  name: new-qr-workflow
   namespace: qr-gen
 spec:
   type: LoadBalancer
   selector:
-    app: badges-qrcode-generator
+    app: new-qr-workflow
   ports:
     - protocol: TCP
       port: 8000

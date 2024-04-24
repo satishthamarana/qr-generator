@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: badges-qrcode-generator
+  name: new-qr-workflow
   labels:
-    app: badges-qrcode-generator
+    app: new-qr-workflow
   namespace: qr-gen
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: badges-qrcode-generator
+      app: new-qr-workflow
   template:
     metadata:
       labels:
-        app: badges-qrcode-generator
+        app: new-qr-workflow
     spec:
       containers:
-        - name: badges-qrcode-generator
-          image: badgesacr1.azurecr.io/image-workflow-1713940472810:latest
+        - name: new-qr-workflow
+          image: badgesacr1.azurecr.io/image-workflow-1713941648098:latest
           ports:
             - containerPort: 8000
